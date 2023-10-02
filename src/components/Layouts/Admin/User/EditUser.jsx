@@ -54,7 +54,7 @@ const EditUser = (props) => {
     const handleDelete = () => {
         deleteUser(id, (data) => {
             handleOpenDeleteDialog();
-            console.log(data);
+            // console.log(data);
         });
 
     };

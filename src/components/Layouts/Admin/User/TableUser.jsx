@@ -4,7 +4,7 @@ import EditUser from './EditUser';
 
 const TableUser = (props) => {
     const { users, searchInput, data } = props;
-    console.log(users);
+    // console.log(users);
     const TABLE_HEAD = [
         'Name',
         'Username',
