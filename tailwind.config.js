@@ -2,11 +2,7 @@ const withMT = require('@material-tailwind/react/utils/withMT');
 
 // export default {
 module.exports = withMT({
-    content: [
-        './index.html',
-        './src/**/*.{js,ts,jsx,tsx}',
-        'node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}',
-    ],
+    content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
     theme: {
         fontFamily: {
             inter: ['Inter', 'sans-serif'],
@@ -32,5 +28,5 @@ module.exports = withMT({
             },
         },
     },
-    plugins: [require('@tailwindcss/forms'), require('flowbite/plugin')],
+    plugins: [require('@tailwindcss/forms')],
 });
