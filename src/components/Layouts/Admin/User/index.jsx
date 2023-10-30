@@ -49,7 +49,7 @@ const UserManagement = (props) => {
 
     const handleSearch = (event) => {
         const { value } = event.target;
-        if (value !== '' && value.length > 2) {
+        if (value !== '' && value.length > 3) {
             setSearchInput(value);
             searchUser(value, (data) => {
                 setUsers(data);
@@ -126,12 +126,17 @@ const UserManagement = (props) => {
                     </div>
 
                     <div className="mt-4">
-                        <TableUser searchInput={searchInput} users={users} data={data} />
+                        <TableUser
+                            searchInput={searchInput}
+                            users={users}
+                            data={data}
+                        />
                     </div>
 
                     <div className="flex justify-between items-center gap-5 mt-4">
                         <p className="text-sm text-gray-600 font-rubik">
-                            Showing {users.length === 0 ? '0' : data[1]} of {users.length} User
+                            Showing {users.length === 0 ? '0' : data[1]} of{' '}
+                            {users.length} User
                         </p>
                         <div className="flex justify-center items-center gap-5">
                             <Button

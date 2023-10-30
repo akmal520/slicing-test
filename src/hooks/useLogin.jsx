@@ -3,8 +3,8 @@ import { getDataLogin } from '../services/auth.service';
 
 export const useLogin = () => {
     const [data, setData] = useState({});
+    const token = localStorage.getItem('token');
     useEffect(() => {
-        const token = localStorage.getItem('token');
         if (token) {
             setData(getDataLogin(token));
         } else {

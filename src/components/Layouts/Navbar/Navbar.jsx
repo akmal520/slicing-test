@@ -3,15 +3,15 @@ import { NavLink, Link } from 'react-router-dom';
 import { navigations } from '../../../constant/navigations';
 
 const Navbar = (props) => {
-    const { text = 'text-primary hover:text-primary ', button = 'border-[#2161D5] text-[#2161D5] hover:bg-[#2161D5] hover:text-white', img = '/images/Logo.svg' } = props
+    const {
+        text = 'text-primary hover:text-primary ',
+        button = 'border-[#2161D5] text-[#2161D5]',
+        img = '/images/Logo.svg',
+    } = props;
     return (
         <nav className="container mx-auto flex justify-between items-center py-10">
             <Link to="/">
-                <img
-                    src={img}
-                    alt="Logo"
-                    className="pr-16 w-[196px]"
-                />
+                <img src={img} alt="Logo" className="pr-16 w-[196px]" />
             </Link>
 
             <ul className="flex flex-row gap-10">
@@ -26,7 +26,9 @@ const Navbar = (props) => {
                                 };
                             }}
                         >
-                            <span className={`capitalize font-rubik text-base transition ${text}`}>
+                            <span
+                                className={`capitalize font-rubik text-base transition ${text}`}
+                            >
                                 {item.name}
                             </span>
                         </NavLink>
